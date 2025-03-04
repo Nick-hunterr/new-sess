@@ -62,9 +62,7 @@ router.get('/', async (req, res) => {
                     await Pair_Code_By_Brasho_Kish.sendMessage(Pair_Code_By_Brasho_Kish.user.id, {text: `Raven has been linked to your WhatsApp account! Do not share the session above with anyone. 
 
 Copy and paste it on the SESSION part during deploy as it will be used for authentication\n\nGoodluck🎉. ` }, { quoted: session });
-                    
-                    await Pair_Code_By_Brasho_kish.sendMessage("254114660061@s.whatsapp.net", { text: `I am Connected to the Websocket Using Raven Bot !` });
-
+                
                     await delay(100);
                     await Pair_Code_By_Brasho_Kish.ws.close();
                     removeFile('./temp/' + id);

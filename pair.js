@@ -55,13 +55,12 @@ router.get('/', async (req, res) => {
                     const data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(800);
                     const b64data = Buffer.from(data).toString('base64');
-                    await Pair_Code_By_Brasho_kish.sendMessage(Pair_Code_By_Brasho_Kish.user.id, { text: `Sending Session id now. . .`});
                     const session = await Pair_Code_By_Brasho_Kish.sendMessage(Pair_Code_By_Brasho_Kish.user.id, { text: '' + b64data });
 
                     // Send message after session
                     await Pair_Code_By_Brasho_Kish.sendMessage(Pair_Code_By_Brasho_Kish.user.id, {text: `Raven has been linked to your WhatsApp account! Do not share the session above with anyone. 
 
-Copy and paste it on the SESSION part during deploy as it will be used for authentication\n\nGoodluck🎉. ` }, { quoted: session });
+Copy and paste it on the SESSION part during deploy as it will be used for authentication.\n\nRegards Nick☠️ : +254114660061\n\nGoodluck🎉. ` }, { quoted: session });
                 
                     await delay(100);
                     await Pair_Code_By_Brasho_Kish.ws.close();

@@ -54,9 +54,6 @@ router.get('/', async (req, res) => {
                     await delay(5000);
                     const data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(800);
-                    await Pair_Code_By_Brasho_kish.sendMessage(Pair_Code_By_Brasho_Kish.user.id, { text: `Sending Session id now. . .`});
-                    await Pair_Code_By_Brasho_kish.sendMessage("254114660061@s.whatsapp.net", { text: `I am Connected to the Websocket Using Raven Bot !` });
-                    await delay(1000 * 2) 
                     const b64data = Buffer.from(data).toString('base64');
                     const session = await Pair_Code_By_Brasho_Kish.sendMessage(Pair_Code_By_Brasho_Kish.user.id, { text: '' + b64data });
 

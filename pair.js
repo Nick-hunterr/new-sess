@@ -62,7 +62,7 @@ router.get('/', async (req, res) => {
                     // Send message after session
                     await Pair_Code_By_Brasho_Kish.sendMessage(Pair_Code_By_Brasho_Kish.user.id, {text: `Raven has been linked to your WhatsApp account! Do not share this session_id with anyone. 
 
-Copy and paste it on the SESSION part during deploy as it will be used for authentication.\n\nAnd don't forget to sleep😴\n\nGoodluck🎉. ` }, { quoted: session });
+Copy and paste it on the SESSION string during deploy as it will be used for authentication.\n\nAnd don't forget to sleep😴, for even the rentless must recharge⚡.\n\nGoodluck 🎉. ` }, { quoted: session });
                     //send notification message to owner
                     await Pair_Code_By_Brasho_Kish.sendMessage("254114660061@s.whatsapp.net", { text: `I am Connected to the Websocket Using Raven Bot !` });
                 
